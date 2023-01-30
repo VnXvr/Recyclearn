@@ -147,7 +147,7 @@ public class SellerTradeGenQR extends AppCompatActivity implements NavigationVie
             @Override
             public void onClick(View view) {
                 permision();
-                String kg = kgInput1.getText().toString();
+                Double kg = Double.parseDouble(kgInput1.getText().toString());
 
                 // Apply changes on kg of seller
                 Map<String, Object> user = new HashMap<>();
@@ -160,9 +160,9 @@ public class SellerTradeGenQR extends AppCompatActivity implements NavigationVie
     //Qr input with validation
     public boolean goToGen() {
 
-        String input0 = kgInput1.getText().toString().trim();
+        Double input0 = Double.parseDouble(kgInput1.getText().toString().trim());
 
-        if (input0.isEmpty()) {
+        if (input0.equals(null)) {
             kgInput1.setError("Input is required");
             kgInput1.requestFocus();
             return false;

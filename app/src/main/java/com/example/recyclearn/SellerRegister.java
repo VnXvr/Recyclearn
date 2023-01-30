@@ -93,8 +93,8 @@ public class SellerRegister extends AppCompatActivity implements View.OnClickLis
         String username = Seller_Username.getText().toString().trim();
         String phonenumber = Seller_Phonenumber.getText().toString().trim();
         String location = Seller_Location.getText().toString().trim();
-        String sellerpoints = "0";
-        String sellerkginput = "0";
+        Double sellerpoints = 0.0;
+        Double sellerkginput = 0.0;
 
 
         if (fullName.isEmpty()) {
@@ -164,8 +164,8 @@ public class SellerRegister extends AppCompatActivity implements View.OnClickLis
                             user.put("username", username);
                             user.put("phoneNumber", phonenumber);
                             user.put("location", location);
-                            user.put("sellerPoints", "0");
-                            user.put("sellerKgInput", "0");
+                            user.put("sellerPoints", 0.0);
+                            user.put("sellerKgInput", 0.0);
                             user.put("createdAt", Timestamp.now());
 
                             documentReference.set(user).addOnFailureListener(new OnFailureListener() {

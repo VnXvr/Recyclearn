@@ -94,8 +94,8 @@ public class SellertradeGenerate extends AppCompatActivity implements Navigation
                 String phoneNumber = value.getString("phoneNumber");
                 String location = value.getString("location");
                 String email = value.getString("email");
-                String sellerPoints = value.getString("sellerPoints");
-                String sellerKG = value.getString("sellerKgInput");
+                Double sellerPoints = value.getDouble("sellerPoints");
+                Double sellerKG = value.getDouble("sellerKgInput");
 
                 fullnametextview.setText(fullName);
                 idnumbertextview.setText(userID);
